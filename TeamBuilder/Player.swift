@@ -18,4 +18,8 @@ class Player {
         Name = name
         ID = Int(arc4random_uniform(100))
     }
+    
+    func resetID(){
+        self.ID = Int(arc4random_uniform(100))
+    }
 }
