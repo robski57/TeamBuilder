@@ -16,6 +16,7 @@
 		81640A4E1C5843C200158019 /* TeamBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A4D1C5843C200158019 /* TeamBuilderUITests.swift */; };
 		81640A5C1C58468300158019 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A5B1C58468300158019 /* Player.swift */; };
 		81640A5E1C584B0600158019 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A5D1C584B0600158019 /* Team.swift */; };
+		81640A601C58628D00158019 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A5F1C58628D00158019 /* TeamController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		81640A4F1C5843C200158019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81640A5B1C58468300158019 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		81640A5D1C584B0600158019 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		81640A5F1C58628D00158019 /* TeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				81640A391C5843C200158019 /* Info.plist */,
 				81640A5B1C58468300158019 /* Player.swift */,
 				81640A5D1C584B0600158019 /* Team.swift */,
+				81640A5F1C58628D00158019 /* TeamController.swift */,
 			);
 			path = TeamBuilder;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81640A5E1C584B0600158019 /* Team.swift in Sources */,
+				81640A601C58628D00158019 /* TeamController.swift in Sources */,
 				81640A301C5843C100158019 /* ViewController.swift in Sources */,
 				81640A5C1C58468300158019 /* Player.swift in Sources */,
 				81640A2E1C5843C100158019 /* AppDelegate.swift in Sources */,
