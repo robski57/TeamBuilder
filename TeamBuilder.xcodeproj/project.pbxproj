@@ -14,6 +14,7 @@
 		81640A381C5843C200158019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81640A361C5843C200158019 /* LaunchScreen.storyboard */; };
 		81640A431C5843C200158019 /* TeamBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A421C5843C200158019 /* TeamBuilderTests.swift */; };
 		81640A4E1C5843C200158019 /* TeamBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A4D1C5843C200158019 /* TeamBuilderUITests.swift */; };
+		C97E67AA1C584C7200337293 /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97E67A91C584C7200337293 /* Teams.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		81640A491C5843C200158019 /* TeamBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81640A4D1C5843C200158019 /* TeamBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuilderUITests.swift; sourceTree = "<group>"; };
 		81640A4F1C5843C200158019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97E67A91C584C7200337293 /* Teams.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				81640A341C5843C100158019 /* Assets.xcassets */,
 				81640A361C5843C200158019 /* LaunchScreen.storyboard */,
 				81640A391C5843C200158019 /* Info.plist */,
+				C97E67A91C584C7200337293 /* Teams.storyboard */,
 			);
 			path = TeamBuilder;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81640A381C5843C200158019 /* LaunchScreen.storyboard in Resources */,
+				C97E67AA1C584C7200337293 /* Teams.storyboard in Resources */,
 				81640A351C5843C100158019 /* Assets.xcassets in Resources */,
 				81640A331C5843C100158019 /* Main.storyboard in Resources */,
 			);
@@ -484,6 +488,7 @@
 				81640A541C5843C200158019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81640A551C5843C200158019 /* Build configuration list for PBXNativeTarget "TeamBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				81640A571C5843C200158019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81640A581C5843C200158019 /* Build configuration list for PBXNativeTarget "TeamBuilderUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				81640A5A1C5843C200158019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
