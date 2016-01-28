@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PTz-BP-Mmt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Lic-9b-8MA">
+            <objects>
+                <navigationController id="PTz-BP-Mmt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SKl-5N-O1d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9FJ-tT-7QG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gD2-Pm-u49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="415"/>
+        </scene>
+        <!--Add Players-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TeamBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPlayersView" title="Add Players" id="BYZ-38-t0r" customClass="ViewController" customModule="TeamBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +32,115 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-bH-cmZ">
+                                <rect key="frame" x="140" y="377" width="320" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Kec-ca-vAx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wNF-H9-guu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XcD-16-PRQ"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-5U-To5">
+                                <rect key="frame" x="213" y="96" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="cSN-DO-4du"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="AddPlayerEnterKey:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="e94-Is-jA6"/>
+                                    <action selector="touchoutofbox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHD-e4-ppt"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-Pd-nOw">
+                                <rect key="frame" x="213" y="143" width="175" height="209"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlayerCell" id="hf9-Ax-AlH">
+                                        <rect key="frame" x="0.0" y="28" width="175" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hf9-Ax-AlH" id="lfh-T7-hFX">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uOf-XE-zPZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qNq-oi-8vL"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzM-fI-QYk">
+                                <rect key="frame" x="258" y="562" width="84" height="30"/>
+                                <state key="normal" title="Build Teams"/>
+                                <connections>
+                                    <action selector="BuildTeamsButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q5G-2a-Umh"/>
+                                    <segue destination="9c4-j2-8Cm" kind="show" id="aIY-cL-fdL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-Po-xfs">
+                                <rect key="frame" x="396" y="96" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="AddPlayerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbK-H1-sQ0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tzM-fI-QYk" firstAttribute="top" secondItem="VG3-bH-cmZ" secondAttribute="bottom" constant="5" id="3RU-gw-ZzG"/>
+                            <constraint firstItem="VG3-bH-cmZ" firstAttribute="top" secondItem="nq5-Pd-nOw" secondAttribute="bottom" constant="25" id="3Te-1V-JRk"/>
+                            <constraint firstItem="VG3-bH-cmZ" firstAttribute="centerX" secondItem="nq5-Pd-nOw" secondAttribute="centerX" id="3sA-OI-B4Q"/>
+                            <constraint firstItem="nq5-Pd-nOw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EqO-aD-0bT"/>
+                            <constraint firstItem="VG3-bH-cmZ" firstAttribute="centerX" secondItem="tzM-fI-QYk" secondAttribute="centerX" id="Igi-WM-VUd"/>
+                            <constraint firstItem="nq5-Pd-nOw" firstAttribute="top" secondItem="eDE-5U-To5" secondAttribute="bottom" constant="17" id="KF8-Jb-JeF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tzM-fI-QYk" secondAttribute="bottom" constant="8" symbolic="YES" id="LIq-av-sZ0"/>
+                            <constraint firstItem="ecM-Po-xfs" firstAttribute="leading" secondItem="eDE-5U-To5" secondAttribute="trailing" constant="8" symbolic="YES" id="Lft-bc-vdn"/>
+                            <constraint firstItem="nq5-Pd-nOw" firstAttribute="leading" secondItem="eDE-5U-To5" secondAttribute="leading" id="Wtg-AH-zCP"/>
+                            <constraint firstItem="ecM-Po-xfs" firstAttribute="top" secondItem="eDE-5U-To5" secondAttribute="top" id="fsr-Pd-Jtr"/>
+                            <constraint firstItem="eDE-5U-To5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="qmt-he-XW3"/>
+                            <constraint firstItem="eDE-5U-To5" firstAttribute="trailing" secondItem="nq5-Pd-nOw" secondAttribute="trailing" id="zjn-fF-YaD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Lcq-fB-nEU"/>
+                    <connections>
+                        <outlet property="PlayerTextBox" destination="eDE-5U-To5" id="2tZ-BO-vVv"/>
+                        <outlet property="PlayersTable" destination="nq5-Pd-nOw" id="MuQ-8g-Yj9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="415"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="C5j-hf-fOS">
+            <objects>
+                <tableViewController id="9c4-j2-8Cm" customClass="TableViewController" customModule="TeamBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JeX-7E-yTv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iSt-4K-hT0">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iSt-4K-hT0" id="ou0-P8-yiv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <connections>
+                        <outlet property="teamTable" destination="JeX-7E-yTv" id="lNH-J2-wCj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvP-FQ-adr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="415"/>
         </scene>
     </scenes>
 </document>

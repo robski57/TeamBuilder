@@ -6,23 +6,25 @@
 //  Copyright © 2016 Robert Masen. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class TeamController {
+var teamController: TeamController?
+
+class TeamController  {
     
-    var Teams = [Team]()
+    var Teams: [Team]?
     var Players: [Player]
     var TeamSize: Int
     
-    init(players: [Player], numberOfTeams: Int){
+    init(players: [Player], teamSize: Int){
         self.Players = players
-        self.TeamSize = numberOfTeams
-        self.Teams.append(Team())
+        self.TeamSize = teamSize
+        createTeams()
     }
     
     func createTeams(){
         sortPlayers()
-        buildTeams()
+        Teams = buildTeams()
         }
     
     func sortPlayers(){
@@ -31,17 +33,17 @@ class TeamController {
         }
     }
     
-    func buildTeams() {
-        var team = 0
-        var playersAdded = 1
+    func buildTeams() -> [Team] {
+        var teams = [Team]()
+        teams.append(Team())
+        var teamIndex = 0
         for player in Players {
-            Teams[team].addPlayer(player)
-            playersAdded++
-            if Teams[team].Players.count == TeamSize {
-                team++
-                Teams.append(Team())
+            if teams[teamIndex].Players.count >= TeamSize {
+                teamIndex++
+                teams.append(Team())
             }
-        }
-
+            teams[teamIndex].addPlayer(player)
+                    }
+        return teams
     }
 }
