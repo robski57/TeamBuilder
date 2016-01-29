@@ -14,7 +14,12 @@
 		81640A381C5843C200158019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81640A361C5843C200158019 /* LaunchScreen.storyboard */; };
 		81640A431C5843C200158019 /* TeamBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A421C5843C200158019 /* TeamBuilderTests.swift */; };
 		81640A4E1C5843C200158019 /* TeamBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A4D1C5843C200158019 /* TeamBuilderUITests.swift */; };
+<<<<<<< HEAD
 		C97E67AA1C584C7200337293 /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97E67A91C584C7200337293 /* Teams.storyboard */; };
+=======
+		81640A5C1C58468300158019 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A5B1C58468300158019 /* Player.swift */; };
+		81640A5E1C584B0600158019 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81640A5D1C584B0600158019 /* Team.swift */; };
+>>>>>>> master
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +53,12 @@
 		81640A491C5843C200158019 /* TeamBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81640A4D1C5843C200158019 /* TeamBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuilderUITests.swift; sourceTree = "<group>"; };
 		81640A4F1C5843C200158019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C97E67A91C584C7200337293 /* Teams.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
+=======
+		81640A5B1C58468300158019 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		81640A5D1C584B0600158019 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+>>>>>>> master
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +115,12 @@
 				81640A341C5843C100158019 /* Assets.xcassets */,
 				81640A361C5843C200158019 /* LaunchScreen.storyboard */,
 				81640A391C5843C200158019 /* Info.plist */,
+<<<<<<< HEAD
 				C97E67A91C584C7200337293 /* Teams.storyboard */,
+=======
+				81640A5B1C58468300158019 /* Player.swift */,
+				81640A5D1C584B0600158019 /* Team.swift */,
+>>>>>>> master
 			);
 			path = TeamBuilder;
 			sourceTree = "<group>";
@@ -260,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81640A5E1C584B0600158019 /* Team.swift in Sources */,
 				81640A301C5843C100158019 /* ViewController.swift in Sources */,
+				81640A5C1C58468300158019 /* Player.swift in Sources */,
 				81640A2E1C5843C100158019 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
